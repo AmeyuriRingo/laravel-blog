@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Profiles;
 use App\User;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 //use Illuminate\Support\Facades\Request;
 use Illuminate\Http\Request;
@@ -18,8 +19,12 @@ class ProfilesController extends Controller
 //        $profile = User::find($id)->profile()->first();
 //
 //        dd(DB::getQueryLog());
-        $profile = User::find($id)->profile()->first();
-
+//        $profileId = 'profile_id_'.$id;
+//        if (Cache::has($profileId)) {
+//            $profile = Cache::get($profileId);
+//        } else {
+            $profile = User::find($id)->profile()->first();
+//        }
         return view('userProfile', ['profile' => $profile]);
     }
 
@@ -31,7 +36,11 @@ class ProfilesController extends Controller
             $profile->country = $_REQUEST['country'];
             $profile->city = $_REQUEST['city'];
             $profile->about_me = $_REQUEST['about_me'];
+
             $profile->save();
+
+            $profileId = 'profile_id_'.$id;
+            Cache::forget($profileId);
         }
         $array = array($profile->user_id);
         return json_encode($array);

@@ -6,6 +6,7 @@ use App\Articles;
 use App\Comments;
 use App\Profiles;
 use App\User;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\CommentConfirmation;
@@ -14,7 +15,12 @@ class ArticlesController extends Controller
 {
     public function show($category, $id)
     {
-        $article = Articles::find($id);
+        $articleId = 'article_id_'.$id;
+        if (Cache::has($articleId)) {
+            $article = Cache::get($articleId);
+        } else {
+            $article = Articles::find($id);
+        }
         $comments = Articles::find($id)->comments()->where('confirmed', '1')->get();
         return view('article', ['article' => $article, 'comments' => $comments]);
     }
@@ -28,8 +34,8 @@ class ArticlesController extends Controller
         $comment->text = $_REQUEST['comment'];
         $comment->first_name = $profile->first_name;
         $comment->last_name = $profile->last_name;
-//        $comment->image = $profile->image;
-        $comment->image = 'dsadsadasdas';
+        $comment->image = $profile->image;
+//        $comment->image = 'dsadsadasdas';
         $comment->confirmed = '0';
 
         $comment->save();

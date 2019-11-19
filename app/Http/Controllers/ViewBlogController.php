@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Profiles;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class ViewBlogController extends Controller
@@ -24,6 +25,9 @@ class ViewBlogController extends Controller
                 $profile->email = $user->email;
 
                 $profile->save();
+
+                $profileId = 'profile_id_'.$profile->id;
+                Cache::forever($profileId, $profile);
             }
         }
 

@@ -6,6 +6,7 @@ use App\Http\Requests\EditUserRequest;
 use App\User;
 use App\Http\Requests\CreateUserRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 //use Illuminate\Support\Facades\Mail;
 
@@ -23,6 +24,9 @@ class createUserController extends Controller
             $user->password = Hash::make($request->password);
 
             $user->save();
+
+            $userId = 'user_id_'.$user->id;
+            Cache::forever($userId, $user);
         }
     }
 
@@ -38,6 +42,9 @@ class createUserController extends Controller
     }
 
     public function edit(EditUserRequest $request, $id){
+        $userId = 'user_id_'.$id;
+        Cache::forget($userId);
+
         $user = User::find($id);
 
         $user->first_name = $request->first_name;
