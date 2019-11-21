@@ -1,4 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/add_comment_form.js": "/js/add_comment_form.js",
+    "/js/create_article_form.js": "/js/create_article_form.js",
+    "/js/create_user_form.js": "/js/create_user_form.js",
+    "/js/edit_profile_form.js": "/js/edit_profile_form.js",
+    "/css/all.css": "/css/all.css"
 }

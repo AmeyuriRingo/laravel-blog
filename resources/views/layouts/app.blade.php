@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('css/blog.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -75,7 +75,7 @@
                                 {{ Auth::user()->first_name }} <span class="caret"></span>
                                 @if(isset($profile->image))
                                 <img src="{{asset('/uploads/'.$profile->image)}}"
-                                     class="rounded-circle z-depth-0"
+                                     class="rounded-circle z-depth-0 size-sm"
                                      alt="avatar image">
                                     @else
                                     <img src="https://www.pinclipart.com/picdir/big/393-3937255_oic-provincial-statistics-officer-psa-maguindanao-user-icon.png"

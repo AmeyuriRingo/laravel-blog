@@ -97,7 +97,7 @@
             <div class="col-sm-3 d-flex justify-content-center align-items-center">
                 @if(isset($profile->image))
                     <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 d-flex">
-                        <img class="img-fluid" src="{{asset('/uploads/'.$profile->image)}}" alt="Profile image">
+                        <img class="img-fluid" src="{{ asset('uploads/'.$profile->image )}}" alt="Profile image">
                         @if(Auth::user()->id == $profile->user_id)
                             <a data-toggle="modal" data-target="#sendImage">
                                 <div class="mask rgba-white-slight"></div>

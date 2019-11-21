@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 //use Illuminate\Support\Facades\Request;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProfilesController extends Controller
 {
@@ -23,7 +24,7 @@ class ProfilesController extends Controller
 //        if (Cache::has($profileId)) {
 //            $profile = Cache::get($profileId);
 //        } else {
-            $profile = User::find($id)->profile()->first();
+        $profile = User::find($id)->profile()->first();
 //        }
         return view('userProfile', ['profile' => $profile]);
     }
@@ -39,20 +40,22 @@ class ProfilesController extends Controller
 
             $profile->save();
 
-            $profileId = 'profile_id_'.$id;
+            $profileId = 'profile_id_' . $id;
             Cache::forget($profileId);
         }
         $array = array($profile->user_id);
         return json_encode($array);
     }
 
-    public function updateImage(Request $request, $id){
-        $path = $request->file('image')->store('', 'public');
+    public function updateImage(Request $request, $id)
+    {
+        $image = $request->file('image')->store('', 'public');
+//        if (!Storage::disk('public')->exists($image->getClientOriginalName())) {
+//            $image
         $profile = Profiles::find($id);
-        if (isset($path)){
-            $profile->image = $path;
-            $profile->save();
-        }
+        $profile->image = $image;
+
+        $profile->save();
         return back();
     }
 }

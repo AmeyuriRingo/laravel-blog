@@ -83,6 +83,10 @@ input:focus ~ label,
     height: 250px;
     overflow: hidden;
 }
+.size-sm{
+    width: 35px;
+    height: 35px;
+}
 
 .border{
     border: none;
