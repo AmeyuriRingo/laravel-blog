@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="774e75e0-92e8-4456-98e1-f3c146bd0283" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/add_comment_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/add_comment_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/create_article_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/create_article_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/create_user_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/create_user_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/edit_profile_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/edit_profile_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/.Hcq328ExY53M9v3K63BPHtUmZdQS5c3HqIopWNdB.jpeg.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/54VMzTH2MVL1xYWRWHMiPBuIL1W7HbSLPiqYo0nh.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/9HSZrxT3J6Pw3P2tCMaKME0DPeppktxWgEjJU5lC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/userProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/userProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -205,7 +194,7 @@
       <workItem from="1573281453044" duration="24603000" />
       <workItem from="1573476218567" duration="107000" />
       <workItem from="1574148323812" duration="3972000" />
-      <workItem from="1574321013711" duration="1316000" />
+      <workItem from="1574321013711" duration="6837000" />
     </task>
     <servers />
   </component>
